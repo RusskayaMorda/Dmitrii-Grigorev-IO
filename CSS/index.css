@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+body{
+    background-image: url(../img/preikestolen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Edu AU VIC WA NT Hand', sans-serif;
+}
+
+h1{
+    font-style: italic;
+    color: rgb(106, 143, 68);
+    background-color: rgb(135, 224, 242);
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2{
+    font-style: oblique;
+    background-color: rgb(86, 70, 70);
+    color: bisque;
+    width: fit-content;
+    margin: 40px;
+    padding:5px
+}
+
+.text {
+    background-color: rgb(100, 67, 15);
+    color: aquamarine;
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+}
+
+#connect{
+    color: rgb(128, 207, 233);
+    background-color: rgb(82, 31, 31);
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+}
+.icon{
+    width: 15px;
+    height: 15px;
+}
+a{
+    color: beige;
+}
