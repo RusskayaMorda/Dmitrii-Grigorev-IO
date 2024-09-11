@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 nav{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    padding: 20px;
-    background-color: transparent;
+    padding: 1.1em;
+    font-style: normal;
+    background-color: black;
 }
 
 body{
@@ -28,32 +33,23 @@ h1{
 }
 
 h2{
+    font-size: 1.6em;
     font-style: oblique;
-    background-color: rgb(86, 70, 70);
-    color: bisque;
+    border-radius: 20px;
+    background-color:  rgb(16, 93, 93);
+    color: rgb(12, 214, 214);
     width: fit-content;
-    margin: 40px;
-    padding:5px
+    margin: 1%;
+    padding: 0.5%;
 }
 
 .text {
-    background-color: rgb(100, 67, 15);
-    color: aquamarine;
+    background-color:  rgb(16, 93, 93);
+    color: rgb(12, 214, 214);
     width: fit-content;
     margin: 20px;
     padding: 10px;
-}
-
-#Connect{
-    color: rgb(128, 207, 233);
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-}
-
-#Name{
-    width: 100%;
-    margin: 0;
+    border-radius: 5%;
 }
 
 .icon{
@@ -61,7 +57,7 @@ h2{
     height: 15px;
 }
 a{
-    color: beige;
+    color: aquamarine;
 }
 
 /*Layouts*/
@@ -74,79 +70,205 @@ a{
     gap: 20px;
 }
 
-#Name{
+#name{
     grid-column: 1;
     grid-row: auto;
 }
 
-#About{
+#about{
     grid-column: 1;
     grid-row: auto;
 }
 
-#Experience{
+#experience{
     grid-column: 1;
     grid-row: auto;
 }
 
-#Experience .header {
+#experience .all{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#experience .job{
+    background-color: rgb(16, 93, 93);
+    flex-wrap: wrap;
+    padding: 1%;
+    border-radius: 20px;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#experience .header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    width: 100%;
 }
 
-#Experience .coName{
-    color: darkcyan;
+#experience .coName{
+    color: rgb(12, 214, 214);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
-    margin-left: 100px;
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 0;
+    vertical-align: middle;
+    max-width: fit-content;
 }
 
-#Experience .dates{
-    color: rgb(30, 165, 165);
+#experience .dates{
+    color: rgb(12, 214, 214);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(95, 71, 42);
-    margin-right: 100px;
+    text-align: right;
 }
 
-#Experience .job-description{
-    display: flex;
+#experience .job-description{
+    display: block;
     flex-direction: column;
-    color: darkcyan;
+    color: rgb(12, 214, 214);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(84, 68, 48);
     width: fit-content;
-    gap: 10px;
-    margin-left: 100px;
+    padding-left: 10px;
 }
 
 
 
-#Skills{
+#skills{
     grid-column: 1;
     grid-row: auto;
 }
 
-#Project{
+#project{
     grid-column: 1;
     grid-row: auto;
 }
 
-#Connect{
+#connect{
     grid-column: 1;
     grid-row: auto;
 }
 
-#Connect .Connect{
+#connect .connect{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-#Connect ul{
+#connect ul{
     display: block;
     justify-content: left;
-    gap: 10px;
     list-style-type: none;
-    background-color:rgb(82, 31, 31);
+    background-color:rgb(0, 0, 0);
+    width: 100vw;
+}
+
+@media screen and (max-width: 220px) {
+    #experience .job{
+        min-width: 10em;
+        width: fit-content;
+    }
+    #experience .job-description{
+        font-size: 0.8em;
+        padding: 20px;
+    }
+    nav{
+        font-size: 0.5em;
+        padding-top: 2.3em;
+        padding-bottom: 2.2em;
+    }
+    h1{
+        font-size: 1.3em;
+    }
+    h2{
+        font-size: 1.1em;
+        margin: 0.5em;
+    }
+    .text {
+        font-size: 1.2em;
+        background-color: aliceblue;
+    }
+    #experience .coName{
+        font-size: 1em;
+    }
+    #experience .dates{
+        font-size: 1em;
+    }
+    #connect ul{
+        font-size: 0.5em;
+    }
+}
+
+
+@media screen and (min-width: 221px) and (max-width: 671px) {
+    .text {
+        font-size: 1.2em;
+        background-color:aqua;
+    }
+    #experience .job{
+        min-width: 14em;
+        max-width: 281.6px;
+        width: fit-content;
+    }
+    #experience .job-description{
+        font-size: 1.2em;
+        padding: 20px;
+    }
+    nav{
+        font-size: 0.69em;
+        padding-top: 1.4em;
+        padding-bottom: 1.4em;
+    }
+    h1{
+        font-size: 1.7em;
+    }
+    h2{
+        font-size: 1.5em;
+        margin: 0.5em;
+    }
+    #experience .coName{
+        font-size: 1.4em;
+    }
+    #experience .dates{
+        font-size: 1.4em;
+    }
+    #connect ul{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 671px){
+    .text {
+        font-size: 1.2em;
+        background-color:blueviolet;
+    }
+    #experience .job{
+        max-width: 20em;
+        width: fit-content;
+    }
+    #experience .job-description{
+        font-size: 1.3em;
+        padding: 20px;
+    }
+    nav{
+        font-size: 1.2em;
+    }
+    h1{
+        margin-top: 0.8em;
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.8em;
+        margin: 0.5em;
+    }
+    #experience .coName{
+        font-size: 1.8em;
+    }
+    #experience .dates{
+        font-size: 1.4em;
+    }
+    #connect ul{
+        font-size: 1.2em;
+    }
 }
