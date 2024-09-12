@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 3em;
+}
+
 nav{
     position: fixed;
     width: 100%;
@@ -36,8 +40,8 @@ h2{
     font-size: 1.6em;
     font-style: oblique;
     border-radius: 20px;
-    background-color:  rgb(16, 93, 93);
-    color: rgb(12, 214, 214);
+    background-color:  #105d5d;
+    color: rgb(231,255,223);
     width: fit-content;
     margin: 1%;
     padding: 0.5%;
@@ -45,12 +49,24 @@ h2{
 
 .text {
     background-color:  rgb(16, 93, 93);
-    color: rgb(12, 214, 214);
+    color: rgb(231,255,223);
     width: fit-content;
     margin: 20px;
     padding: 10px;
     border-radius: 5%;
 }
+
+p {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(231,255,223);
+    background-color: #105d5d;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
 
 .icon{
     width: 15px;
@@ -109,7 +125,7 @@ a{
 }
 
 #experience .coName{
-    color: rgb(12, 214, 214);
+    color: rgb(231,255,223);
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
     padding: 2px 5px;
@@ -119,7 +135,7 @@ a{
 }
 
 #experience .dates{
-    color: rgb(12, 214, 214);
+    color: rgb(231,255,223);
     font-family: Arial, Helvetica, sans-serif;
     text-align: right;
 }
@@ -127,7 +143,7 @@ a{
 #experience .job-description{
     display: block;
     flex-direction: column;
-    color: rgb(12, 214, 214);
+    color: rgb(231,255,223);
     font-family: Arial, Helvetica, sans-serif;
     width: fit-content;
     padding-left: 10px;
@@ -138,6 +154,29 @@ a{
 #skills{
     grid-column: 1;
     grid-row: auto;
+}
+
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+    grid-auto-rows: auto;
+    gap: 10px;
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 0;
+    margin: 1.5em;
+}
+
+#skills li {
+    background-color: #105d5d;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    word-wrap: break-word; 
+    word-break: break-word; 
+    white-space: normal;
+    max-width: 100%;
 }
 
 #project{
@@ -187,7 +226,6 @@ a{
     }
     .text {
         font-size: 1.2em;
-        background-color: aliceblue;
     }
     #experience .coName{
         font-size: 1em;
@@ -204,7 +242,6 @@ a{
 @media screen and (min-width: 221px) and (max-width: 671px) {
     .text {
         font-size: 1.2em;
-        background-color:aqua;
     }
     #experience .job{
         min-width: 14em;
@@ -240,15 +277,13 @@ a{
 
 @media screen and (min-width: 671px){
     .text {
-        font-size: 1.2em;
-        background-color:blueviolet;
+        font-size: 1.6em;
     }
     #experience .job{
-        max-width: 20em;
-        width: fit-content;
+        width: 30em;
     }
     #experience .job-description{
-        font-size: 1.3em;
+        font-size: 1.6em;
         padding: 20px;
     }
     nav{
