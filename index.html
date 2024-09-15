@@ -33,7 +33,7 @@
             <section id="about">
             <h2>About</h2>
                 <section class="text">
-                    <p>A young Jack of all trades. Love rollerskating and motorcycles</p>
+                    A young Jack of all trades. Love rollerskating and motorcycles
                 </section>
             </section>
 
@@ -80,6 +80,36 @@
                 <h2>Projects</h2>
             </section>
 
+            <section id="messageBlock">
+                <h2>Message me</h2>
+                <form name="leaveMessage" class="messageForm">
+                        <label for="userName">Your name</label>
+                    <input 
+                        type="text"
+                        id="userName"
+                        name="userName"
+                        required="true"
+                    ><br>
+                        <label for="userEmail">Email</label>
+                    <input 
+                        type="email"
+                        id="userEmail"
+                        name="userEmail"
+                        required="true"
+                    ><br>
+                        <label for="userMessage">Message</label>
+                    <textarea
+                        id="userMessage"
+                        name="userMessage"
+                        required="true"
+                    ></textarea><br>
+                    <button type="submit" value="submit" name="submit" class="submit-button"><p>submit</p></button>
+                </form>     
+            </section>
+            <section id="messageSection">
+                <h2>Messages</h2>
+                <ul id="messages"></ul>
+            </section>
             <section id="connect">
                 <div class="connect">
                     <h2>Connect</h2>
@@ -97,7 +127,7 @@
                                 </a>
                             </li>
                         </ul>
-                </div>        
+                </div>      
             </section>
         </div>
         <script src="JS/index.js"></script>
