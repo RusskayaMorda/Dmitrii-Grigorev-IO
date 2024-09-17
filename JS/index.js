@@ -117,3 +117,30 @@ function makeEditButton(entry, name, email, message) {
 
     return editButton;
 }
+
+const projectSection = document.getElementById('projects');
+const projectList = document.createElement('ul');
+projectSection.appendChild(projectList);    
+
+fetch('https://api.github.com/users/russkayamorda/repos')
+    .then((response)=>{
+        if (response.ok){
+            return response.json();
+        } else {
+            throw new Error('Failed to fetch repositories')
+        }
+    })
+    .then ((repositories) =>{
+        for (let i in repositories){
+            const repo = repositories[i];
+            const project = document.createElement('li');
+            project.innerText = repo.name
+            projectList.appendChild(project)
+        };
+    })
+    .catch(error=>{
+        console.error('Error:', error)
+    })
+
+
+
