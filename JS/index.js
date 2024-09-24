@@ -22,7 +22,7 @@ Skills
 */
 
 
-const skillsList = ['JS', 'python', 'engineering', 'project management'];
+const skillsList = ['JS', 'Python', 'Engineering', 'Project management'];
 const skillsSection = document.getElementById('skills');
 const skillsUL = skillsSection.querySelector('ul');
 
